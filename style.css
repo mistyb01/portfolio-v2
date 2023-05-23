@@ -14,19 +14,33 @@
     box-sizing: border-box;
 }
 
+:root {
+    /* layout */
+    --clr-main-bg:  #FFFAFA;
+    --clr-main-accent:  #6A8BFF;
+    /* type */
+    --clr-text-body:  #3F59B2;
+    --clr-text-dark:  #203D7A;
+    --clr-text-accent:  #6A8BFF;
+    --clr-text-highlight:  #EE63E0;
+}
+
 body {
-    background: #FFFAFA;
+    color: var(--clr-text-body);
     font-family: Palanquin, Verdana, sans-serif;
+    size: '1.5rem';
+    background: var(--clr-main-bg);
 }
 
 /* utility classes */
 .display-font {
-    font-family: DarumadropOne, Georgia, 'Times New Roman', Times, serif
+    font-family: DarumadropOne, Georgia, 'Times New Roman', Times, serif;
 }
 
 /* typography classes */
 .section-heading {
-    font-family: DarumadropOne, Georgia, 'Times New Roman', Times, serif
+    font-family: DarumadropOne, Georgia, 'Times New Roman', Times, serif;
+    color: var(--clr-main-accent);
 }
 
 /* elements */
@@ -36,4 +50,9 @@ body {
 
 .nav-link {
     text-decoration: none;
+}
+
+.about-photo {
+    max-width: 15rem;
+    height: auto;
 }
