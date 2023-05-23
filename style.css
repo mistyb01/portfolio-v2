@@ -4,6 +4,11 @@
 }
 
 @font-face {
+    font-family: Palanquin Bold;
+    src: url(./fonts/Palanquin/Palanquin-Bold.ttf);
+}
+
+@font-face {
     font-family: DarumadropOne;
     src: url(./fonts/Darumadrop_One/DarumadropOne-Regular.ttf);
 }
@@ -18,6 +23,7 @@
     /* layout */
     --clr-main-bg:  #FFFAFA;
     --clr-main-accent:  #6A8BFF;
+    --clr-secondary-accent: #FAC4DE;
     /* type */
     --clr-text-body:  #3F59B2;
     --clr-text-dark:  #203D7A;
@@ -28,22 +34,39 @@
 body {
     color: var(--clr-text-body);
     font-family: Palanquin, Verdana, sans-serif;
-    size: '1.5rem';
+    size: 1.5rem;
     background: var(--clr-main-bg);
 }
 
+main {
+    margin: 0 1.25rem;
+}
+
+
 /* utility classes */
+.spacer-y > * + * {
+    margin-top: 2rem;
+}
+
 .display-font {
     font-family: DarumadropOne, Georgia, 'Times New Roman', Times, serif;
 }
 
 /* typography classes */
+strong { font-family: Palanquin Bold; }
+
+.highlight { color: var(--clr-text-highlight); }
+
 .section-heading {
     font-family: DarumadropOne, Georgia, 'Times New Roman', Times, serif;
     color: var(--clr-main-accent);
+    font-size: 2.25rem;
+    /* to be replaced w squiggly */
+    border-bottom: 5px var(--clr-secondary-accent) dashed;
 }
 
 /* elements */
+
 .nav-link-list {
     list-style: none;
 }
@@ -52,7 +75,21 @@ body {
     text-decoration: none;
 }
 
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .about-photo {
     max-width: 15rem;
     height: auto;
+    border-radius: 20px;
+    box-shadow: 20px 20px 0px 0px var(--clr-secondary-accent);
+}
+
+footer {
+    margin: 3rem 0 1rem 0;
+    text-align: center;
+    color: var(--clr-text-accent)
 }
