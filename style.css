@@ -113,9 +113,8 @@ nav {
 }
 
 footer {
-    margin: 3rem 0 1rem 0;
     text-align: center;
-    color: var(--clr-text-accent)
+    color: var(--clr-text-accent);
 }
 
 @media (min-width: 768px) {
@@ -130,6 +129,33 @@ footer {
         display: flex;
         gap: 1rem;
     }
+
+    main {
+        width: 60vw;
+        margin: 3rem auto;
+    }
+
+    .about {
+        position: relative;
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    .about-photo {
+        align-self: flex-start;
+    }
+
+    .about-bg-box {
+        position: absolute;
+        top: 5rem;
+        left: -2rem;
+        width: 90%;
+        height: 90%;
+        border-radius: 20px;
+        background-color: var(--clr-secondary-accent);
+        opacity: 0.2;
+        z-index: -1;
+    }
 }
 
 
@@ -140,5 +166,8 @@ footer {
 
     .nav-link-list {
         gap: 2rem;
+    }
+
+    .about-bg-box {
     }
 }
