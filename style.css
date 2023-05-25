@@ -41,7 +41,7 @@
 body {
     color: var(--clr-text-body);
     font-family: Palanquin, Verdana, sans-serif;
-    /* font-size: 1.25rem; */
+    font-size: 1.25rem;
     background: var(--clr-main-bg);
 }
 
@@ -60,20 +60,17 @@ a {
 }
 
 main > section + section {
-    margin-top: 4rem;
+    margin-top: 6rem;
 }
 
 /* for section fade transitions */
 
 .animate {
-    /* transform: translateX(-500px); */
     opacity: 0;
-    transition: 1.5s all ease;
+    transition: 1s ease-in-out opacity;
 }
 
-
 .active {
-    /* transform: translateX(0); */
     opacity: 1;
 }
 
@@ -89,7 +86,6 @@ main > section + section {
 .bg-accent {
     background-color: var(--clr-accent2-light);
     border-radius: var(--border-radius-med);
-    mix-blend-mode: multiply;
 }
 
 /* typography classes */
@@ -119,7 +115,6 @@ strong, .bold { font-family: Palanquin Bold; }
 nav {
     color: var(--clr-main-accent);
     background-color: var(--clr-main-bg);
-    /* box-shadow: 0px 8px 0px 0px var(--clr-text-dark); */
     border: 2px solid var(--clr-main-accent);
     padding: 0.5rem 1rem;
     font-size: 1.25rem;
@@ -209,6 +204,8 @@ nav {
     letter-spacing: 0.1ch;
 }
 
+.contact { width: 100%; }
+
 .contact-box {
     font-size: 1.5rem;
     text-align: center;
@@ -225,27 +222,26 @@ footer {
 @media (min-width: 768px) {
     main {
         width: 60vw;
-        margin: 3rem auto;
+        margin: 0 auto;
     }
 
-    
     main > section + section {
         margin-top: 0;
     }
 
     section.container {
-        min-height: 100vh;
-        padding-top: 6rem;
+        padding-top: 10rem;
+        min-height: calc(100vh - 10rem);
     }
 
     nav {
-        margin: 0rem auto;
+        margin: 1rem auto;
         width: 80vw;
         border-radius: 50px;
         padding: 0.5rem 4rem;
         position: fixed;
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, 0%);
         z-index: 2;
     }
 
@@ -273,8 +269,6 @@ footer {
         height: 90%;
         z-index: -1;
     }
-
-
 }
 
 
@@ -291,6 +285,7 @@ footer {
     .project-container {
         flex-direction: row;
         text-align: left;
+        align-items:flex-end;
     }
 
     .project-stack {
@@ -304,10 +299,6 @@ footer {
 
     .project-container:nth-child(odd) .project-stack {
         justify-content: flex-end;
-    }
-
-    .project-text, .project-img {
-        align-self: flex-end;
     }
 
 }
