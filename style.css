@@ -96,7 +96,9 @@ main > section + section {
 
 strong, .bold { font-family: Palanquin Bold; }
 
-.highlight { color: var(--clr-text-highlight); }
+.highlight { 
+    color: var(--custom-clr, var(--clr-text-highlight)); 
+}
 
 .section-heading {
     font-family: DarumadropOne, Georgia, 'Times New Roman', Times, serif;
@@ -107,12 +109,10 @@ strong, .bold { font-family: Palanquin Bold; }
     margin-bottom: 2rem;
 }
 
-.emphasized {
-    /* text-transform: uppercase; */
-    /* letter-spacing: 0.2ch; */
-    color: var(--clr-text-dark);
-}
+/* for the differing color effect on nav */
 
+#projects-link { --custom-clr:  #ff7a21; }
+#contact-link { --custom-clr:  #69cf9f; }
 
 /* elements */
 

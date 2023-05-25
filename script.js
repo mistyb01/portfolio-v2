@@ -12,7 +12,7 @@ const sectionObserver = new IntersectionObserver((sections)=>{
                 section.target.classList.add("active");
                 sectionLink.classList.add("highlight");
             } else {
-                section.target.classList.remove("active");
+                // section.target.classList.remove("active");
                 sectionLink.classList.remove("highlight");
             }
         }
