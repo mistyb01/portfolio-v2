@@ -11,10 +11,7 @@ const sectionObserver = new IntersectionObserver((sections)=>{
             } 
         }
     })
-}, {threshold: 0.25})
-
-// note! padding is included in each section, which can make the threshold misleading ..
-// ( should probably find a better way to space out sections.. )
+}, {threshold: 0.1})
 
 const sectionObserverForLinks = new IntersectionObserver((sections)=>{
     sections.forEach(section => {

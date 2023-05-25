@@ -18,7 +18,7 @@
     margin: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-
+    scroll-margin-top: 100px;
 }
 
 :root {
@@ -231,7 +231,7 @@ footer {
     }
 
     section.container, footer {
-        padding-top: 10rem;
+        margin-top: 10rem;
     }
 
     nav {
@@ -241,6 +241,7 @@ footer {
         padding: 0.5rem 4rem;
         position: fixed;
         left: 50%;
+        top: 0; /* fix for the margin collapse issue */
         transform: translate(-50%, 0%);
         z-index: 2;
     }
