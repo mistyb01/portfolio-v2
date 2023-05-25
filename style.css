@@ -59,7 +59,7 @@ img {
 }
 
 a {
-    color: inherit;
+    /* color: inherit; */
 }
 
 /* utility classes */
@@ -81,7 +81,7 @@ a {
 
 strong, .bold { font-family: Palanquin Bold; }
 
-.highlight { color: var(--clr-text-highlight); }
+.highlight { background-color: var(--clr-text-highlight); }
 
 .section-heading {
     font-family: DarumadropOne, Georgia, 'Times New Roman', Times, serif;
