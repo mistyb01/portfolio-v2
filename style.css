@@ -23,7 +23,7 @@
 
 :root {
     /* layout */
-    --clr-main-bg:  #fefaef;
+    --clr-main-bg:  #fff9f9;
     --clr-main-accent:  #6A8BFF;
     --clr-accent2: #FAC4DE;
     --clr-accent2-light: #FEEFF4;
@@ -214,14 +214,15 @@ nav {
 
 footer {
     text-align: center;
-    color: var(--clr-text-accent);
+    color: var(--clr-main-accent);
+    padding-bottom: 1rem;
 }
 
 
 
 @media (min-width: 768px) {
     main {
-        width: 60vw;
+        width: 65vw;
         margin: 0 auto;
     }
 
@@ -229,9 +230,8 @@ footer {
         margin-top: 0;
     }
 
-    section.container {
+    section.container, footer {
         padding-top: 10rem;
-        min-height: calc(100vh - 10rem);
     }
 
     nav {
